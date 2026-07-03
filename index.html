@@ -1,50 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Student Registration</title>
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Registration System</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<h2>Student Registration</h2>
+<div class="container">
 
-<form id="studentForm">
+    <h1>🎓 Student Registration</h1>
 
-    <input
+    <p class="subtitle">
+        Register a new student
+    </p>
+
+    <form id="studentForm">
+
+        <label>Student Name</label>
+
+        <input
         type="text"
         id="name"
-        placeholder="Student Name"
+        placeholder="Enter Student Name"
         required>
 
-    <br><br>
+        <label>Registration Number</label>
 
-    <input
+        <input
         type="text"
         id="reg"
-        placeholder="Registration Number"
+        placeholder="Enter Registration Number"
         required>
 
-    <br><br>
+        <label>Course</label>
 
-    <input
+        <input
         type="text"
         id="course"
-        placeholder="Course"
+        placeholder="Enter Course"
         required>
 
-    <br><br>
+        <button type="submit">
 
-    <button type="submit">
-        Register
-    </button>
+            Register Student
 
-</form>
+        </button>
 
-<p id="status"></p>
+    </form>
+
+    <p id="status"></p>
+
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <script src="app.js"></script>
 
 </body>
+
 </html>
