@@ -8,3 +8,22 @@ const client = supabase.createClient(
 );
 
 console.log("Supabase Connected!");
+document
+.getElementById("studentForm")
+.addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    const name =
+    document.getElementById("name").value;
+
+    const reg =
+    document.getElementById("reg").value;
+
+    const course =
+    document.getElementById("course").value;
+
+    const status =
+    document.getElementById("status");
+
+    status.innerHTML = "Saving...";
