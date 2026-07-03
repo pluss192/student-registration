@@ -27,3 +27,31 @@ document
     document.getElementById("status");
 
     status.innerHTML = "Saving...";
+    try {
+
+    const { data, error } = await client
+        .from("students")
+        .insert([
+            {
+                name: name,
+                reg_number: reg,
+                course: course
+            }
+        ]);
+
+    if (error) {
+        status.innerHTML = error.message;
+        console.error(error);
+        return;
+    }
+
+    status.innerHTML = "Student registered successfully!";
+
+    document.getElementById("studentForm").reset();
+
+} catch (err) {
+
+    status.innerHTML = err.message;
+    console.error(err);
+
+}
